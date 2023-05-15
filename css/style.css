@@ -1,0 +1,211 @@
+* {
+  padding: 0; margin: 0;
+  box-sizing: border-box;
+}
+/*
+síla selektorů
+0 - *
+1 - tagy
+10 - class - třídy <p class="cokoliv">     .cokoliv {   }
+100 - id   - id    <p id="presne">         #presne {   }
+1000 - inline CSS
+10000 - !important
+*/
+
+.new_line {
+  clear: both;
+}
+
+body {
+  font-size: 14px;
+  font-family: Verdana, Arial;
+}
+
+#wrapper {
+  width: 100vw; /* viewport width */
+  min-height: 100vh; /* viewport height */
+  background-color: #A3A264;
+  /* rgb(125,23,75), red, rgba(155,45,66,0.7) */
+  position: relative;
+}
+/* HLAVIČKA  */
+header {
+  width: 100%; height: 200px;
+  background-color: #A36464;
+  position: relative;
+}
+
+header img {
+  width: 150px;
+  position: absolute;
+  top: 25px; left: 25px;
+  /* top, left, right, bottom */
+}
+
+header strong {
+  font-size: 3rem;
+  position: absolute;
+  top: 72px;
+  left: 200px;
+}
+
+/* MENU */
+nav {
+  width: 30%; height: calc(100vh - 200px - 50px); /* výpočet výška menu 200 hlavička, 50 patička */
+  float: left;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+nav ul li a {
+  width: 100%; height: 50px;
+  /*  inline element a, img, input, span ... */
+  display: block;
+  background-color: #48526E;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  margin-bottom: 10px;
+  transition: background-color 1s;
+}
+
+nav ul li a:hover {
+  background-color: #6A8E7F;
+}
+
+
+main {
+  width: 70%; min-height: calc(100vh - 200px - 50px); /* výpočet výška menu 200 hlavička, 50 patička */
+  background-color: lightgreen;
+  float: left;
+  padding: 20px 30px 80px;
+}
+
+h1 {
+  color: indigo;
+}
+
+main table {
+  margin-top: 40px;
+  font-size: 1.3rem;
+}
+
+main table th {
+  text-align: left;
+}
+
+main table td {
+  padding: 5px 20px 5px 5px;
+}
+
+#obrazek {
+  width: 256px; height: 234px;
+/*
+  width: 100%;
+  height: auto;
+*/
+  transition: width 1s, height 1s;
+}
+
+#obrazek:hover {
+  width: 512px;
+  height: 468px;
+}
+
+main iframe {
+  float: left;
+  margin-right: 30px;
+}
+
+/*
+main h1 {
+  color: green;
+}
+
+main>h1 {
+  color: blue;
+}
+
+#presne {
+  color: orange;
+}
+
+.cokoliv {
+  color: lightblue;
+}
+
+#presne.cokoliv {
+  color: pink;
+}
+
+#presne {
+  color: green !important;
+}
+
+#presne {
+  color: salmon !important;
+}
+*/
+
+footer {
+  width: 100%; height: 50px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 50px;
+  position: fixed;
+  bottom: 0px; left: 0px;
+  /* top, left, bottom, right jen dvě z toho  */
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media (max-width: 799px) {
+  nav {
+    width: 100%; height: 180px; /* výpočet výška menu 200 hlavička, 50 patička */
+    background-color: pink;
+    float: left;
+  }
+
+  main {
+    width: 100%; height: calc(100vh - 200px - 180px - 50px); /* výpočet výška menu 200 hlavička, 80 navigace, 50 patička */
+    background-color: lightgreen;
+    float: left;
+  }
+}
+
+@media (min-width: 1201px) {
+  #wrapper {
+    width: 1200px;
+    margin: 0 auto; /* první hodnota je nahoře a dole a druhá vlevo a vpravo */
+  }
+
+  footer {
+    width: 1200px;
+    left: 50%;
+    bottom: 0%;
+    margin-left: -600px; /*half the width*/
+  }
+}
+/****************************/
+/*********TEST***************/
+/*
+#levy {
+  width: 50%; height: 300px;
+  background-color: salmon;
+  float: left;
+  padding: 20px;
+}
+
+#pravy {
+  width: 50%; height: 300px;
+  background-color: olive;
+  float: left;
+}
+*/
